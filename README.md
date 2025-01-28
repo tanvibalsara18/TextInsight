@@ -2,14 +2,12 @@
 
 ## Workflows
 
-1. Update config.yaml for configuration details.
-2. Update params.yaml for hyperparameters and settings.
-3. Define entities in the entity folder.
-Update the configuration manager in the src/config directory.
-4. Implement components in the components directory.
-5. Develop the pipeline in the pipeline directory.
-6. Update the main.py for the project entry point.
-7. Update the app.py for deploying the application.
+1. Update Configuration Files: Modify config.yaml and params.yaml for project settings.
+2. Define Entities: Create necessary entities in the entity folder.
+3. Update Configuration Manager: Implement changes in the src/config directory.
+4. Build Components: Develop key features in the components directory.
+5. Set Up Pipeline: Define the processing pipeline in the pipeline directory.
+6. Update Entry Points: Configure main.py as the entry point and app.py for deployment.
 
 # How to Run the Project?
 ### STEPS:
