@@ -1,13 +1,13 @@
-# End to End TextInsight (Text-Summarizer-Project)
+# End to End TextInsight (Text-Summarizer-NLP-Project)
 
 ## Workflows
 
-1. Update Configuration Files: Modify config.yaml and params.yaml for project settings.
-2. Define Entities: Create necessary entities in the entity folder.
-3. Update Configuration Manager: Implement changes in the src/config directory.
-4. Build Components: Develop key features in the components directory.
-5. Set Up Pipeline: Define the processing pipeline in the pipeline directory.
-6. Update Entry Points: Configure main.py as the entry point and app.py for deployment.
+1. **Update Configuration Files:** Modify config.yaml and params.yaml for project settings.
+2. **Define Entities:** Create necessary entities in the entity folder.
+3. **Update Configuration Manager:** Implement changes in the src/config directory.
+4. **Build Components:** Develop key features in the components directory.
+5. **Set Up Pipeline:** Define the processing pipeline in the pipeline directory.
+6. **Update Entry Points:** Configure main.py as the entry point and app.py for deployment.
 
 # How to Run the Project?
 ### STEPS:
