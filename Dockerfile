@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app/
 
 # Optional: Clean up and uninstall unnecessary packages if needed
-RUN pip uninstall -y transformers accelerate && \
-    pip install transformers accelerate
+# RUN pip uninstall -y transformers accelerate && \
+#     pip install transformers accelerate
 
 # Set the command to run your application (ensure app.py is present)
 CMD ["python3", "app.py"]
