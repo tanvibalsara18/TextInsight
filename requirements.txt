@@ -9,7 +9,7 @@ nltk
 tqdm
 PyYAML
 matplotlib
-torch==2.4.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+torch==2.4.1 -f https://download.pytorch.org/whl/cpu/torch_stable.html
 notebook
 boto3
 mypy-boto3-s3
