@@ -9,7 +9,7 @@ COPY requirements.txt .
 
 # Upgrade pip and install dependencies efficiently
 RUN pip install --upgrade pip && \
-    pip install --no-cache-dir --default-timeout=300 -r requirements.txt && \
+    pip install --no-cache-dir --default-timeout=300 -r requirements.txt --find-links https://download.pytorch.org/whl/cpu/torch_stable.html && \
     pip install --no-cache-dir --upgrade accelerate
 
 # Copy the rest of the application files
