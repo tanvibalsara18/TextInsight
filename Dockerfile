@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip && \
-    pip install --default-timeout=100 -r requirements.txt && \
-    pip install --upgrade accelerate 
+    pip install --default-timeout=300 -r requirements.txt && \
+    pip install --upgrade accelerate
 
 COPY . /app
 
