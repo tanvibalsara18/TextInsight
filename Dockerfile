@@ -1,21 +1,19 @@
+# Use a lightweight Python base image
 FROM python:3.8-slim-buster
 
+# Set working directory inside the container
 WORKDIR /app
 
-COPY requirements.txt /app/
+# Copy only requirements first for better caching
+COPY requirements.txt .
 
-# Install system dependencies (only necessary ones)
-RUN apt-get update && apt-get install -y \
-    gcc g++ make wget curl git && \
-    rm -rf /var/lib/apt/lists/*
+# Upgrade pip and install dependencies efficiently
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir --default-timeout=300 -r requirements.txt && \
+    pip install --no-cache-dir --upgrade accelerate
 
-# Upgrade pip
-RUN pip install --upgrade pip
+# Copy the rest of the application files
+COPY . .
 
-# Install dependencies, forcing CPU version of torch
-RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-RUN pip install --default-timeout=1200 -r requirements.txt
-
-COPY . /app
-
+# Default command to run the application
 CMD ["python3", "app.py"]
