@@ -4,13 +4,17 @@ WORKDIR /app
 
 COPY requirements.txt /app/
 
+# Install system dependencies (only necessary ones)
 RUN apt-get update && apt-get install -y \
-    gcc g++ make wget curl git \
-    && rm -rf /var/lib/apt/lists/*
+    gcc g++ make wget curl git && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip && \
-    pip install --default-timeout=300 -r requirements.txt && \
-    pip install --upgrade accelerate
+# Upgrade pip
+RUN pip install --upgrade pip
+
+# Install dependencies, forcing CPU version of torch
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --default-timeout=1200 -r requirements.txt
 
 COPY . /app
 
