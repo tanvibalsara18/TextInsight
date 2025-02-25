@@ -5,9 +5,10 @@ import os
 from fastapi.templating import Jinja2Templates
 from starlette.responses import RedirectResponse
 from fastapi.responses import Response
-from TextInsight.pipeline.prediction import PredictionPipeline
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+from TextInsight.pipeline.prediction import PredictionPipeline
+
 text:str = "What is Text Summarization?"
 
 app = FastAPI()
