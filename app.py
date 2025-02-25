@@ -7,7 +7,7 @@ from starlette.responses import RedirectResponse
 from fastapi.responses import Response
 from TextInsight.pipeline.prediction import PredictionPipeline
 
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
 text:str = "What is Text Summarization?"
 
 app = FastAPI()
